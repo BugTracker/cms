@@ -4,16 +4,198 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<display-name>itCms</display-name>
+	<security-role>
+  		<role-name>admin</role-name>
+  	</security-role>
+  	<security-role>
+  	<role-name>cashier</role-name>
+  		</security-role>
+  	<security-role>
+  		<role-name>director</role-name>
+  	</security-role>
+  	<security-role>
+  		<role-name>guardian</role-name>
+  	</security-role>
+  	<security-role>
+  	<role-name>lecturer</role-name>
+  		</security-role>
+  	<security-role>
+  		<role-name>manager</role-name>
+  	</security-role>
+  	<security-role>
+  		<role-name>student</role-name>
+  	</security-role>
+  	<security-constraint>
+    	<display-name>Admin Pages</display-name>
+    	<web-resource-collection>
+    		<web-resource-name>Protected Admin Area</web-resource-name>
+      		<description></description>
+      		<url-pattern>/admin/*</url-pattern>
+      		<http-method>GET</http-method>
+      		<http-method>POST</http-method>
+      		<http-method>HEAD</http-method>
+      		<http-method>PUT</http-method>
+      		<http-method>OPTIONS</http-method>
+      		<http-method>TRACE</http-method>
+      		<http-method>DELETE</http-method>
+    	</web-resource-collection>
+	    <auth-constraint>
+	    	<description></description>
+	    	<role-name>admin</role-name>
+	    </auth-constraint>
+	    <user-data-constraint>
+	    	<transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+  	</security-constraint>
+  	<security-constraint>
+    	<display-name>Cashier Pages</display-name>
+    	<web-resource-collection>
+    		<web-resource-name>Protected Cashier Area</web-resource-name>
+      		<description></description>
+      		<url-pattern>/cashier/*</url-pattern>
+      		<http-method>GET</http-method>
+      		<http-method>POST</http-method>
+      		<http-method>HEAD</http-method>
+      		<http-method>PUT</http-method>
+      		<http-method>OPTIONS</http-method>
+      		<http-method>TRACE</http-method>
+      		<http-method>DELETE</http-method>
+    	</web-resource-collection>
+	    <auth-constraint>
+	    	<description></description>
+	    	<role-name>cashier</role-name>
+	    </auth-constraint>
+	    <user-data-constraint>
+	    	<transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+  	</security-constraint>
+  	<security-constraint>
+    	<display-name>Director Pages</display-name>
+    	<web-resource-collection>
+    		<web-resource-name>Protected Director Area</web-resource-name>
+      		<description></description>
+      		<url-pattern>/director/*</url-pattern>
+      		<http-method>GET</http-method>
+      		<http-method>POST</http-method>
+      		<http-method>HEAD</http-method>
+      		<http-method>PUT</http-method>
+      		<http-method>OPTIONS</http-method>
+      		<http-method>TRACE</http-method>
+      		<http-method>DELETE</http-method>
+    	</web-resource-collection>
+	    <auth-constraint>
+	    	<description></description>
+	    	<role-name>director</role-name>
+	    </auth-constraint>
+	    <user-data-constraint>
+	    	<transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+  	</security-constraint>
+  	<security-constraint>
+    	<display-name>Guardian Pages</display-name>
+    	<web-resource-collection>
+    		<web-resource-name>Protected Guardian Area</web-resource-name>
+      		<description></description>
+      		<url-pattern>/guardian/*</url-pattern>
+      		<http-method>GET</http-method>
+      		<http-method>POST</http-method>
+      		<http-method>HEAD</http-method>
+      		<http-method>PUT</http-method>
+      		<http-method>OPTIONS</http-method>
+      		<http-method>TRACE</http-method>
+      		<http-method>DELETE</http-method>
+    	</web-resource-collection>
+	    <auth-constraint>
+	    	<description></description>
+	    	<role-name>guardian</role-name>
+	    </auth-constraint>
+	    <user-data-constraint>
+	    	<transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+  	</security-constraint>
+  	<security-constraint>
+    	<display-name>Lecturer Pages</display-name>
+    	<web-resource-collection>
+    		<web-resource-name>Protected Lecturer Area</web-resource-name>
+      		<description></description>
+      		<url-pattern>/cashier/*</url-pattern>
+      		<http-method>GET</http-method>
+      		<http-method>POST</http-method>
+      		<http-method>HEAD</http-method>
+      		<http-method>PUT</http-method>
+      		<http-method>OPTIONS</http-method>
+      		<http-method>TRACE</http-method>
+      		<http-method>DELETE</http-method>
+    	</web-resource-collection>
+	    <auth-constraint>
+	    	<description></description>
+	    	<role-name>lecturer</role-name>
+	    </auth-constraint>
+	    <user-data-constraint>
+	    	<transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+  	</security-constraint>
+  	<security-constraint>
+    	<display-name>Manager Pages</display-name>
+    	<web-resource-collection>
+    		<web-resource-name>Protected Manager Area</web-resource-name>
+      		<description></description>
+      		<url-pattern>/manager/*</url-pattern>
+      		<http-method>GET</http-method>
+      		<http-method>POST</http-method>
+      		<http-method>HEAD</http-method>
+      		<http-method>PUT</http-method>
+      		<http-method>OPTIONS</http-method>
+      		<http-method>TRACE</http-method>
+      		<http-method>DELETE</http-method>
+    	</web-resource-collection>
+	    <auth-constraint>
+	    	<description></description>
+	    	<role-name>manager</role-name>
+	    </auth-constraint>
+	    <user-data-constraint>
+	    	<transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+  	</security-constraint>
+  	<security-constraint>
+    	<display-name>Student Pages</display-name>
+    	<web-resource-collection>
+    		<web-resource-name>Protected Student Area</web-resource-name>
+      		<description></description>
+      		<url-pattern>/student/*</url-pattern>
+      		<http-method>GET</http-method>
+      		<http-method>POST</http-method>
+      		<http-method>HEAD</http-method>
+      		<http-method>PUT</http-method>
+      		<http-method>OPTIONS</http-method>
+      		<http-method>TRACE</http-method>
+      		<http-method>DELETE</http-method>
+    	</web-resource-collection>
+	    <auth-constraint>
+	    	<description></description>
+	    	<role-name>student</role-name>
+	    </auth-constraint>
+	    <user-data-constraint>
+	    	<transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+  	</security-constraint>
+  	<login-config>
+  		<auth-method>FORM</auth-method>
+  		<realm-name>cmsJdbcRealm</realm-name>
+  	</login-config>
+  	<servlet>
+    	<servlet-name>Faces Servlet</servlet-name>
+    	<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    	<load-on-startup>1</load-on-startup>
+  	</servlet>
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+	<session-config>
+    	<session-timeout>10</session-timeout>
+  	</session-config>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>/index.xhtml</welcome-file>
 	</welcome-file-list>
 </web-app>

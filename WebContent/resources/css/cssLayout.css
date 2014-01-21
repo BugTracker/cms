@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+html, body {
+	margin:0;
+	padding: 0;
+	height: 100%
+}
+
+.ui-widget, 
+.ui-widget .ui-widget {
+    font-size: 14px;
+}
+
+#top {
+    position: relative;
+
+}
+
+#bottom {
+    position: relative;
+    background-color: #e5e5e5;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+#left {
+    float: left;
+    background-color: white;
+    color: #7F7F7F;
+    padding: 5px;
+    width: 175px;
+    border-bottom: 1px solid #7f7f7f;
+    border-top: 1px solid #7f7f7f;
+    border-right: 1px solid #7f7f7f;
+}
+
+#right {
+    float: right;
+}
+
+#header {
+   	height: 40px;
+   	background: #CCC9C9;
+}
+
+#content {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:40px;   /* Height of the footer */
+   background: #CCC9C9;
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+
+.center_content {
+	height: 100%;
+	overflow: auto;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.left_content {
+    background-color: white;
+    padding: 5px;
+    margin-left: 190px;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+.right_content {
+    background-color: white;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+.center_element{
+	position="relative";
+	margin:0 auto;
+}
+
+p.helvetica {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}

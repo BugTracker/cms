@@ -1,41 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
-<h:head>
-	<title>itBottles | Login</title>
-	<style>
-.centerElement {position ="relative";
-	margin: 0 auto;
-}
-</style>
-</h:head>
-<h:body>
-	<p:layout fullPage="true">
-		<p:layoutUnit position="north" size="50">
-			<h:outputText value="itBottles" />
-		</p:layoutUnit>
-		<p:layoutUnit position="south" size="50">
-			<h:outputText value="NITC 2013" />
-		</p:layoutUnit>
-		<p:layoutUnit position="center">
-			<form method="post" action="loginservlet">
-				<p:panelGrid columns="2" styleClass="centerElement">
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:composition template="template.xhtml">
+		<ui:define name="body">
+			<h:form>
+				<p:panelGrid columns="2" styleClass="center_element">
 					<f:facet name="header">Sign in</f:facet>
-
-					<h:outputLabel value="Username" />
-					<input type="text" name="username" />
-					<h:outputLabel value="Password" />
-					<input type="password" name="password" />
-
+					
+					<h:outputLabel value="Username"/>
+					<h:inputText id="usernameInput" value="#{loginController.username}"/>
+					<h:outputLabel value="Password"/>
+					<h:inputSecret id="passwordInput" value="#{loginController.password}"/>
+								
 					<f:facet name="footer">
-						<input type="submit" value="Login" />
+						<h:commandButton value="Login" action="#{loginController.login}"/>
 					</f:facet>
 				</p:panelGrid>
-			</form>
-		</p:layoutUnit>
-	</p:layout>
-</h:body>
+			</h:form>
+		</ui:define>
+	</ui:composition>
 </html>

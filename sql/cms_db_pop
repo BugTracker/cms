@@ -1,0 +1,23 @@
+﻿INSERT INTO t_group (grp_name) VALUES ('admin');
+INSERT INTO t_group (grp_name) VALUES ('cashier');
+INSERT INTO t_group (grp_name) VALUES ('director');
+INSERT INTO t_group (grp_name) VALUES ('guardian');
+INSERT INTO t_group (grp_name) VALUES ('lecturer');
+INSERT INTO t_group (grp_name) VALUES ('manager');
+INSERT INTO t_group (grp_name) VALUES ('student');
+
+INSERT INTO t_user (usr_username, usr_password) VALUES ('admin', '1a1dc91c907325c69271ddf0c944bc72');
+INSERT INTO t_user (usr_username, usr_password) VALUES ('cashier', '1a1dc91c907325c69271ddf0c944bc72');
+INSERT INTO t_user (usr_username, usr_password) VALUES ('director', '1a1dc91c907325c69271ddf0c944bc72');
+INSERT INTO t_user (usr_username, usr_password) VALUES ('guardian', '1a1dc91c907325c69271ddf0c944bc72');
+INSERT INTO t_user (usr_username, usr_password) VALUES ('lecturer', '1a1dc91c907325c69271ddf0c944bc72');
+INSERT INTO t_user (usr_username, usr_password) VALUES ('manager', '1a1dc91c907325c69271ddf0c944bc72');
+INSERT INTO t_user (usr_username, usr_password) VALUES ('student', '1a1dc91c907325c69271ddf0c944bc72');
+
+INSERT INTO t_user_group (usr_id, grp_id) VALUES (1, 1);
+INSERT INTO t_user_group (usr_id, grp_id) VALUES (2, 2);
+INSERT INTO t_user_group (usr_id, grp_id) VALUES (3, 3);
+INSERT INTO t_user_group (usr_id, grp_id) VALUES (4, 4);
+INSERT INTO t_user_group (usr_id, grp_id) VALUES (5, 5);
+INSERT INTO t_user_group (usr_id, grp_id) VALUES (6, 6);
+INSERT INTO t_user_group (usr_id, grp_id) VALUES (7, 7);
